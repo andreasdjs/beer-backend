@@ -209,7 +209,7 @@ router.get('/ratedMatchedBeerLocalStore', function(req, res) {
 			if (err) {
 				return res.status(500).json({ message: err.message });
 			}
-			var localStoreBeer = { "localStoreBeer" : data };
+//			var localStoreBeer = { "localStoreBeer" : data };
 
 			console.log(data);
 			var articles = data.map( (el) => {
@@ -217,6 +217,8 @@ router.get('/ratedMatchedBeerLocalStore', function(req, res) {
 			});
 			var articles = articles[0];
 //			console.log(articles);
+
+			var availableLocalBeer = [];
 
 			var locals = ratedMatchedBeer.map( (lel) => {
 				if(lel.matchingIds.length > 0) {
@@ -226,13 +228,16 @@ router.get('/ratedMatchedBeerLocalStore', function(req, res) {
 						articles.forEach( (findmatch) => {
 							if (findmatch == id) {
 								console.log("match!");
+								console.log(lel);
+								availableLocalBeer.push(lel);
 							}
 						});
 					});
 				}
 			});
+			console.log(availableLocalBeer);
 
-			res.json({ localStoreBeer : data });
+			res.json({ "availableLocalBeer" : availableLocalBeer });
 		}); 
 	}); 
 });
