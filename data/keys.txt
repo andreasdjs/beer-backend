@@ -1,0 +1,65 @@
+Systembolaget
+_____________
+
+__
+name
+name2
+producer
+supplier
+type
+price
+pricePerLiter
+alcohol
+countryOfOrigin
+ecological
+volumeInMl
+packaging
+
+__
+
+nr
+Artikelid
+Varnummer
+
+Namn (Nils Oscar)
+Namn2 (Kalasöl)
+Producent
+Leverantor
+
+Varugrupp (Öl)
+Typ
+Prisinklmoms
+PrisPerLiter
+Alkoholhalt
+
+Ursprunglandnamn (Sverige)
+
+Utgått 0/1 not in use?
+Ekologisk 0/1 
+
+Volymiml
+Forpackning
+
+
+
+RavarorBeskrivning
+
+Untappd
+_____________
+
+beer_name (Kalas\u00f6l)
+brewery_name
+rating_score
+
+beer_abv
+brewery_country
+brewery_city
+beer_type
+brewery_state
+
+
+Best beer
+_____________
+
+beerName
+breweryName

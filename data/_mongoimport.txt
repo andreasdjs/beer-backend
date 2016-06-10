@@ -1,0 +1,16 @@
+
+mongoimport --db newskills --collection ratedbeers --drop --file ratedBeerClean.txt --jsonArray
+
+mongoimport --db newskills --collection systembolagetbeers --drop --file beerClean.txt --jsonArray
+
+/* matches.txt */
+
+mongoimport --db newskills --collection matchingbeers --drop --file matches.txt --jsonArray
+
+/* ratedBeerMatched.txt (rebuild index.js first) */
+
+mongoimport --db newskills --collection ratedmatchedbeers --drop --file ratedBeerMatched.txt --jsonArray
+
+/* storeArticleLocal */
+
+mongoimport --db newskills --collection localstorearticles --drop --file storeArticleLocal.txt --jsonArray

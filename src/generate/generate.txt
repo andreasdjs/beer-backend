@@ -1,0 +1,273 @@
+
+/* 52 Skills */
+
+var skills = [
+	"Java", "JavaScript", "C#", "MVC", "Visual Studio", "ASP.NET", "Design Patterns", "Bootstrap", "NoSQL", "SEO", "Load Balancing", "Node.js", "AngularJS", "ReactJS", "MongoDB", "Mean Stack", "jQuery", "User Experience", "Web Design", "User Interface Design", "Photoshop", "Graphic Design", "HTML5", "CSS3", "Illustrator", "JSON", "Regular Expressions", "AJAX", "Git", "Gulp.js", "Web Typography", "SASS", "LESS", "Stylus", "Middleware", "Unit Testing", "Test Driven Development", "Copywriting", "Typography", "Agile Methodologies", "Kanban", "Scrum", "Drupal", "WordPress", "SQL", "Data Aggregation", "Eclipse", "Unix", "Linux", "Solaris", "JUnit", "Hudson"
+];
+
+/* CORE Skills */
+
+var coreSkills = [
+	"Java", "JavaScript", "C#"
+];
+
+
+var location = [
+	"Göteborg", "Stockholm"
+];
+
+/* Firstname female */
+
+var women = [
+	"Maria", "Elisabeth", "Anna", "Kristina", "Margareta", "Eva", "Birgitta", "Karin", "Linnéa", "Marie", "Ingrid", "Marianne", "Sofia", "Kerstin", "Lena", "Helena", "Sara", "Emma", "Katarina", "Johanna", "Inger", "Viktoria", "Cecilia", "Monica", "Susanne", "Elin ", "Jenny", "Therese", "Irene", "Anita", "Ulla", "Hanna", "Louise", "Carina", "Ingegerd", "Gunilla", "Viola", "Ann", "Linda", "Helen", "Ida ", "Malin", "Annika", "Matilda", "Ulrika", "Josefin", "Elsa", "Anette", "Barbro", "Sofie", "Anneli", "Astrid", "Caroline", "Siv", "Kristin", "Julia", "Alice", "Emelie", "Åsa", "Karolina", "Lisa", "Camilla", "Britt", "Madeleine", "Yvonne", "Amanda ", "Agneta", "Erika", "Rut", "Lovisa", "Gun", "Charlotte", "Sandra", "Berit", "Rebecka", "Frida", "Maja", "Ellinor", "Alexandra", "Ann-Marie", "Inga", "Jessica", "Isabelle ", "Märta", "Charlotta", "Ingeborg", "Emilia", "Ellen", "Ebba", "Birgit", "Sonja", "Klara", "Ann-Christin", "Maj", "Gunnel", "Pia", "Britta", "Lisbeth", "Mona", "Olivia"
+];
+
+/* Firstname male */
+
+var men = [
+	"Karl", "Erik", "Lars", "Anders", "Per", "Mikael", "Johan", "Olof", "Nils ", "Jan", "Gustav", "Lennart", "Hans", "Peter", "Gunnar", "Sven", "Fredrik", "Thomas", "Bengt", "Bo", "Daniel", "Åke", "Göran", "Alexander", "Oskar", "Christer", "Andreas", "Stefan", "Magnus", "Martin", "Mats", "John", "Mattias", "Leif", "Henrik", "Ulf", "Bertil", "Björn", "Jonas", "Arne", "Axel", "Ingemar", "Robert", "Christian", "Marcus", "Niklas", "Kjell", "Stig", "David", "Viktor", "Emil", "Håkan", "Rolf", "Patrik", "Rickard", "Christoffer", "Joakim", "Wilhelm", "Tommy", "Mohamed", "Roland", "Filip", "William", "Claes", "Ingvar", "Roger", "Simon", "Sebastian", "Anton", "Kent", "Ove", "Johannes", "Kenneth", "Tobias", "Jörgen", "Kurt", "Emanuel", "Jonathan", "Rune", "Jakob", "Robin", "Hugo ", "Gösta", "Elias", "Lucas", "Adam", "Georg", "Johnny", "Sten", "Linus", "Torbjörn", "Alf", "Börje", "Dan", "Bernt", "Arvid", "Allan", "Albin", "Josef", "Oliver"
+];
+
+var lastname = [
+	"Andersson", "Johansson", "Karlsson", "Nilsson", "Eriksson", "Larsson", "Olsson", "Persson", "Svensson", "Gustafsson", "Pettersson", "Jonsson", "Jansson", "Hansson", "Bengtsson", "Jönsson", "Lindberg", "Jakobsson", "Magnusson", "Olofsson", "Lindström", "Lindqvist", "Lindgren", "Axelsson", "Berg", "Bergström", "Lundberg", "Lundgren", "Lind", "Lundqvist", "Mattsson", "Berglund", "Fredriksson", "Sandberg", "Henriksson", "Forsberg", "Sjöberg", "Wallin", "Engström", "Danielsson", "Eklund", "Håkansson", "Lundin", "Gunnarsson", "Bergman", "Björk", "Holm", "Samuelsson", "Fransson", "Wikström", "Isaksson", "Bergqvist", "Arvidsson", "Nyström", "Holmberg", "Löfgren", "Söderberg", "Nyberg", "Blomqvist", "Claesson", "Mårtensson", "Nordström", "Lundström", "Ali", "Mohamed", "Eliasson", "Pålsson", "Viklund", "Björklund", "Berggren", "Sandström", "Lund", "Nordin", "Ström", "Åberg", "Hermansson", "Ekström", "Holmgren", "Hedlund", "Sundberg", "Dahlberg", "Falk", "Hellström", "Sjögren", "Abrahamsson", "Martinsson", "Ek", "Blom", "Öberg", "Andreasson", "Månsson", "Strömberg", "Åkesson", "Jonasson", "Hansen", "Norberg", "Åström", "Sundström", "Lindholm", "Holmqvist"
+];
+
+var numberOfSkills = 5;
+
+/********************************************************/
+/** Add users
+/********************************************************/
+
+for(i= 0; i < 100; i++){
+	db.skills.insert(
+	{
+		"user" : "user"+i,
+		"firstname" : women[i],
+		"lastname" : lastname[i],		
+		"skills" : [skills[Math.floor(Math.random() * 52)]]
+	});
+}
+
+for(i= 0; i < 100; i++){
+	var j = 100 + i;
+	db.skills.insert(
+	{
+		"user" : "user"+j,
+		"firstname" : men[i],
+		"lastname" : lastname[i],		
+		"skills" : [skills[Math.floor(Math.random() * 52)]]
+	});
+}
+
+/*******/
+/** Insert thisIsMe
+
+db.skills.insert(
+	{
+		"user" : "user200",
+		"firstname" : "John",
+		"lastname" : "Doe",		
+		"skills" : [
+			"JavaScript",
+			"Node.js",
+			"AngularJS",
+			"MongoDB",
+			"User Experience",
+			"Web Design",
+			"User Interface Design",
+			"Photoshop",
+			"Mean Stack",
+			"Git",
+			"SASS",
+			"Gulp.js"
+		],
+		"location" : "Göteborg"
+});
+
+
+// Update all users with skills
+
+for(i= 0; i < 200; i++){
+	db.skills.update(
+		{ "user" : "user"+i }, 
+		{ "$addToSet" : 
+			{ "skills" : 
+				{ "$each" : 
+					[skills[Math.floor(Math.random() * 52)]]
+				}
+			}
+		}
+	)
+}
+
+// Add core skill (java, javascript, C#)
+
+for(i= 0; i < 200; i++){
+	db.skills.update(
+		{ "user" : "user"+i }, 
+		{ "$addToSet" : 
+			{ "skills" : 
+				{ "$each" : 
+					[coreSkills[Math.floor(Math.random() * 3)]]
+				}
+			}
+		}
+	)
+}
+
+
+// Update all users with location
+
+for(i= 0; i < 200; i++){
+	db.skills.update(
+		{ "user" : "user"+i }, 
+		{ "$set" : { "location" : location[Math.floor(Math.random() * 2)] }
+		}
+	)
+}
+
+/********************************************************/
+/** Early sketches
+
+for(i= 0; i < 100; i++){
+	db.skills.insert(
+	{
+		"user" : "user"+i,
+		"name" : women[i],
+		"skills" : skills[Math.floor(Math.random() * 52)]
+	});
+}
+
+for(i= 0; i < 100; i++){
+	var j = 100 + i;
+	db.skills.insert(
+	{
+		"user" : "user"+j,
+		"name" : men[i],		
+		"skills" : skills[Math.floor(Math.random() * 52)]
+	});
+}
+
+/********************************************************/
+/** Early sketches
+
+for(i= 0; i < 100; i++){
+	db.skills.insert(
+	{
+		"user" : "user"+i,
+		"name" : women[i],
+		"skills" : skills[Math.floor(Math.random() * 52)]
+	});
+}
+
+
+for(i= 0; i < 100; i++){
+	db.skills.insert(
+	{
+		"user" : "user"+i,
+		"skill" : Math.floor(Math.random() * 52)
+	});
+}
+
+
+
+/********************************************************/
+/** View
+/********************************************************/
+
+db.skills.find({"name" : /^.*$/}, {"name" : 1, "_id" : 0}).pretty()
+
+
+/* Change shell batch size from default 20: */
+
+DBQuery.shellBatchSize = 201
+
+/********************************************************/
+/** Aggregate
+/********************************************************/
+
+/* Count
+
+db.skills.count(
+	{ "skills" : { "$in" : ["JavaScript"]}}
+) 
+
+/* Match "Javascipt"
+
+db.skills.aggregate(
+	{ $match : 	
+				{ "skills" : { "$in" : ["JavaScript"]}},
+	},
+	{"$project" : 
+		{ 
+			"User" : "$user",
+			"Firstname" : "$firstname",
+			"Lastname" : '$lastname',
+			 "_id" : 0
+		}
+	},
+	{ $sort : {Lastname : 1}}
+) 
+
+db.skills.aggregate(
+	{ $match : 	
+			{ $and : 
+				[
+				{ "skills" : { "$in" : ["JavaScript"]}},
+				{ "skills" : { "$in" : ["Kanban"]}}
+				]
+			}
+	},
+	{"$project" : 
+		{ 
+			"User" : "$user",
+			"Firstname" : "$firstname",
+			"Lastname" : '$lastname',
+			 "_id" : 0
+		}
+	},
+	{ $sort : {Lastname : 1}}
+) 
+
+
+
+
+/********************************************************/
+/** Total listing of skills with descriptions.
+/********************************************************/
+
+
+var skills = [
+	"Java", "JavaScript", "C#", "MVC", "Visual Studio", "ASP.NET", "Design Patterns", "Bootstrap", "NoSQL", "SEO", "Load Balancing", "Node.js", "AngularJS", "ReactJS", "MongoDB", "Mean Stack", "jQuery", "User Experience", "Web Design", "User Interface Design", "Photoshop", "Graphic Design", "HTML5", "CSS3", "Illustrator", "JSON", "Regular Expressions", "AJAX", "Git", "Gulp.js", "Web Typography", "SASS", "LESS", "Stylus", "Middleware", "Unit Testing", "Test Driven Development", "Copywriting", "Typography", "Agile Methodologies", "Kanban", "Scrum", "Drupal", "WordPress", "SQL", "Data Aggregation", "Eclipse", "Unix", "Linux", "Solaris", "JUnit", "Hudson"
+];
+
+
+for(i= 0; i < skills.length; i++){
+	db.availableskills.insert(
+	{
+		"name" : skills[i],
+		"description" : "",
+		"status" : "Approved"
+	});
+}
+
+
+/* Descriptions from Wikipedia: 
+
+"JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification." 
+
+"Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible."
+
+db.availableskills.update(
+	{ "name" : "JavaScript" }, 
+	{ "$set" : { "description" : "JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification." }
+	}
+)
+
+db.availableskills.update(
+	{ "name" : "Java" }, 
+	{ "$set" : { "description" : "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible." }
+	}
+)
+
+

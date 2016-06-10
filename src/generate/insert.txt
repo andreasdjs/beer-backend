@@ -1,0 +1,82 @@
+db.skills.insert([
+	{
+		'name' : 'Karl',
+		'skills' : [
+			'JavaScript', 
+			'AngularJS', 
+			'jQuery'
+		]
+	 },
+	{
+		'name' : 'Erik',
+		'skills' : [
+			'JavaScript', 
+			'AngularJS', 
+			'jQuery'
+		]
+	 },
+	{
+		'name' : 'Lars',
+		'skills' : [
+			'JavaScript', 
+			'AngularJS', 
+			'jQuery'
+		]
+	 },
+	{
+		'name' : 'Anders',
+		'skills' : [
+			'JavaScript', 
+			'AngularJS', 
+			'jQuery'
+		]
+	 },
+	{
+		'name' : 'Per',
+		'skills' : [
+			'JavaScript', 
+			'AngularJS', 
+			'jQuery'
+		]
+	 },
+	{
+		'name' : 'Maria',
+		'skills' : [
+			'JavaScript', 
+			'AngularJS', 
+			'jQuery'
+		]
+	 },
+	{
+		'name' : 'Elisabeth',
+		'skills' : [
+			'JavaScript', 
+			'AngularJS', 
+			'jQuery'
+		]
+	 },
+	{
+		'name' : 'Anna',
+		'skills' : [
+			'JavaScript', 
+			'AngularJS', 
+			'jQuery'
+		]
+	 },
+	{
+		'name' : 'Kristina',
+		'skills' : [
+			'JavaScript', 
+			'AngularJS', 
+			'jQuery'
+		]
+	 },
+	{
+		'name' : 'Margareta',
+		'skills' : [
+			'JavaScript', 
+			'AngularJS', 
+			'jQuery'
+		]
+	 }
+])

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BEST BEER</title>
+	<meta charset="UTF-8">	
+	<link rel="stylesheet" type="text/css" href="css/app.css" />	
+<!--    <link rel="stylesheet" type="text/css" href="css/app.min.css" /> -->
+	<!-- Typekit -->
+	<script src="https://use.typekit.net/vrc8urf.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<!-- Live reload --> 
+	<script>
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</head>
+<body ng-app="app">
+	<div id="container">
+		<div ng-controller="myController">
+			<div id="logo"><h1 class="title">BEST BEER</h1></div>
+
+			<div id="innerContainer">
+
+			<h1>Linked matches</h1>
+
+			<div ng-repeat="beer in systembolagetMatchedBeer track by $index" class="user">
+				<span class="name"><b>{{ beer.name }} {{ beer.brewery }}</b> Score: {{ beer.rating }}, Alkoholhalt: {{ beer.beerAbv }} Artikelid:</span><span ng-repeat="id in beer.matchingIds track by $index"><span class="skill">{{ id }}</span> </span>
+			</div>			
+
+			<h1>Likely matches</h1>
+
+			<div ng-repeat="beer in availableBeer track by $index" class="user">
+				<span class="name"><b>{{ beer.name }} {{ beer.brewery }} {{ beer.id }}— </b> {{ beer.artikelId}} name1: {{ beer.name1 }}, name2:  {{ beer.name2 }}, {{ beer.sbrewery}}, Score: {{ beer.rating }}, {{ beer.volumeInMl }} ml, {{ beer.price}}</span>
+			</div>			
+
+			<h1>Top rated beers</h1>
+
+			<div ng-repeat="beer in ratedBeer track by $index" class="user">
+				<span class="name"><b>{{ beer.name }}</b> {{ beer.brewery }} {{ beer.rating }} id: {{ beer.id }}</span>
+			</div>			
+<!--			
+			<h1>Systembolaget beers</h1>
+
+			<div ng-repeat="beer in systembolagetBeer track by $index" class="user">
+				<span class="name"><b>{{ beer.name }}</b> {{ beer.brewery }} {{ beer.price }}</span>
+			</div>			
+-->
+			</div>
+			<div id="footer"> </div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+	<script src="scripts/app.js" type="text/javascript"></script>
+	<script src="scripts/services.js" type="text/javascript"></script>	
+	<script src="scripts/controllers.js" type="text/javascript"></script>
+	<script src="scripts/directives.js" type="text/javascript"></script>
+</body>
+</html>
