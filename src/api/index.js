@@ -30,7 +30,6 @@ function insertMatches () {
 	});
 
 	users.matchingBeerModel.find().lean().exec({}, function(err, data) {
-
 //	users.matchingBeerModel.find({}, function(err, data) {
 		if (err) {
 			console.log(err.message);
