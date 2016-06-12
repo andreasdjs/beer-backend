@@ -236,6 +236,16 @@ router.get('/ratedMatchedBeerLocalStore', function(req, res) {
 			});
 			console.log(availableLocalBeer);
 
+/* remove duplicates if any */
+
+	var availableLocalBeer = availableLocalBeer.filter(
+         function(a){if (!this[a.id]) {this[a.id] = 1; return a;}},
+         {}
+		); 
+
+/* */
+
+
 			res.json({ "availableLocalBeer" : availableLocalBeer });
 		}); 
 	}); 
