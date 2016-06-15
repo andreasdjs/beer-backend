@@ -3,7 +3,7 @@
 
 ## Backround
 
-This is a school project to practive writing a hybrid app using Ionic and Angular.
+This is a school project to practice writing a hybrid app using Ionic and Angular.
 
 ## Story
 
