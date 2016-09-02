@@ -53,7 +53,7 @@ $ gulp
 #### Start server
 
 ```shell
-$ npm start
+$ npm test
 ```
 
 
